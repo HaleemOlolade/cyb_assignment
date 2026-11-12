@@ -1,0 +1,37 @@
+import csv
+
+# Fictional student records
+students = [
+    ["STU001", "Computer Science", 100, 92, 84],
+    ["STU002", "Cyber Security", 100, 88, 79],
+    ["STU003", "Software Engineering", 200, 95, 91],
+    ["STU004", "Information Technology", 200, 76, 68],
+    ["STU005", "Computer Science", 300, 83, 75],
+    ["STU006", "Data Science", 300, 90, 88],
+    ["STU007", "Cyber Security", 400, 72, 81],
+    ["STU008", "Software Engineering", 100, 85, 77],
+    ["STU009", "Information Technology", 300, 91, 86],
+    ["STU010", "Computer Science", 400, 97, 93],
+    ["STU011", "Data Science", 200, 79, 72],
+    ["STU012", "Cyber Security", 300, 86, 80],
+    ["STU013", "Software Engineering", 400, 93, 89],
+    ["STU014", "Information Technology", 100, 68, 65],
+    ["STU015", "Computer Science", 200, 89, 82],
+    ["STU016", "Data Science", 400, 94, 90],
+    ["STU017", "Cyber Security", 200, 81, 74],
+    ["STU018", "Software Engineering", 300, 87, 85],
+    ["STU019", "Information Technology", 400, 78, 70],
+    ["STU020", "Data Science", 100, 96, 92],
+]
+
+headers = [
+    "Student ID", "Department", "Level",
+    "Attendance Percentage", "Average Examination Score"
+]
+
+with open("student_dataset.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerow(headers)
+    writer.writerows(students)
+
+print("Dataset created successfully with", len(students), "fictional student records.")
